@@ -27,7 +27,7 @@ function start() {
 
 function displayImage(i) {
   // console.log(i);
-  board.innerHTML += '<div class=" col-md-4 col-xs-3 card"><img id="cardz' + i + '" src="images/' + solutionArray[i] + '" onclick="pickCard(\'' + solutionArray[i] + '\', \'' + i + '\',this); return false;" class="img"></div>';
+  board.innerHTML += '<div class=" col-md-4 col-xs-3 card"><img id="cardz' + i + '" src="images/big10.jpg" onclick="pickCard(\'' + solutionArray[i] + '\', \'' + i + '\',this); return false;" class="img"></div>';
   // console.log(i);
 }
 
@@ -42,11 +42,19 @@ window.pickCard = function (a, b, c) {
     if (cardsFlippedOver === 2) {
       if (fliparray[0] === fliparray[1]) {
         console.log('same');
-      } else console.log("different");
+      } else {
+        setInterval(hideCard, 500);
+        console.log("different");
+      }
     }
   }
   console.log(fliparray);
 };
+
+function hideCard(a) {
+  document.getElementById(fliparray[2]).src = "images/big10.jpg";
+  document.getElementById(fliparray[3]).src = "images/big10.jpg";
+}
 //shuffle tiles on board
 function shuffleArray(d) {
   for (var c = d.length - 1; c > 0; c--) {
