@@ -4,3 +4,16 @@
 body {
   background: #e2ebf3;
 }
+
+.card{
+  height: 200px;
+  // width:auto;
+  border: black 2px solid;
+  // margin: 3px 3px;
+  // padding: 10px;
+}
+.img{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}

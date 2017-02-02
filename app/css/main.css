@@ -1,0 +1,13 @@
+body {
+  background: #e2ebf3; }
+
+.card {
+  height: 200px;
+  border: black 2px solid; }
+
+.img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+/*# sourceMappingURL=main.css.map */
