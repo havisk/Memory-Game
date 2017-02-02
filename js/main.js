@@ -42,12 +42,20 @@ window.pickCard = function(a,b,c){
     if(cardsFlippedOver ===2){
       if(fliparray[0]===fliparray[1]){
         console.log('same');
-      }else
+      }else{
+        hideCard();
       console.log("different");
+      }
     }
   }
   console.log(fliparray);
 };
+
+function hideCard(a){
+  document.getElementById()
+  fliparray[2]
+
+}
 //shuffle tiles on board
 function shuffleArray(d) {
   for (var c = d.length - 1; c > 0; c--) {
