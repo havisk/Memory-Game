@@ -1,9 +1,16 @@
 body {
-  background: #e2ebf3; }
+  background: #3B5998; }
+
+.outer {
+  background: #3B5998;
+  height: 500px;
+  width: 800px;
+  margin: auto; }
 
 .card {
-  height: 200px;
-  border: black 2px solid; }
+  height: 80px;
+  background: white;
+  border: orange 1px solid; }
 
 .img {
   height: 100%;

@@ -6,6 +6,9 @@ var board = document.getElementById("gameboard");
 var cardsFlippedOver = 0;
 var solutionArray = tileImage.concat(tileImage);
 var fliparray = [];
+var lastCardPicked = -1;
+var timer = '';
+var score = 0;
 // console.log(solutionArray);
 shuffleArray(solutionArray);
 console.log(solutionArray);
@@ -14,27 +17,22 @@ console.log(solutionArray);
 // console.log(tileImage);
 start();
 function start(){
-  
+  score = 0;
   //clear board
   board.innerHTML = " ";
   //Create gameboard
   for(var i = 0; i <= (solutionArray.length)-1; i++){
-    displayImage(i);
+    board.innerHTML += '<div class="col-md-3 col-xs-3 card"><img id="cardz'+i+'" src="images/big10.jpg" onclick="pickCard(\''+solutionArray[i]+'\', \''+i+'\',this); return false;" class="img"></div>';
     // console.log(i);
   }
 
 }
 
-function displayImage(i) {
-  // console.log(i);
-  board.innerHTML += '<div class=" col-md-4 col-xs-3 card"><img id="cardz'+i+'" src="images/big10.jpg" onclick="pickCard(\''+solutionArray[i]+'\', \''+i+'\',this); return false;" class="img"></div>';
-  // console.log(i);
-}
 
 window.pickCard = function(a,b,c){
   // console.log(c);
   //setting to only be able to flip 2 cards
-  if(cardsFlippedOver < 2){
+  if(cardsFlippedOver < 2 && lastCardPicked !== b){
     fliparray[cardsFlippedOver] = solutionArray[b];
     fliparray[(cardsFlippedOver+2)] = c.id;
     cardsFlippedOver++;
@@ -42,18 +40,36 @@ window.pickCard = function(a,b,c){
     if(cardsFlippedOver ===2){
       if(fliparray[0]===fliparray[1]){
         console.log('same');
+        inFade(b);
+        pickAgain();
+        score++;
+        //check if all game is won
+        if(tileImage.length === score){
+          console.log('end game');
+        }
       }else{
-        setInterval(hideCard, 500);
+        timer = setInterval(hideCard, 500);
         console.log("different");
+        
       }
     }
+    lastCardPicked = b;
   }
-  console.log(fliparray);
+  // console.log(fliparray);
 };
 
-function hideCard(a){
+function pickAgain(){
+  cardsFlippedOver = 0;
+  fliparray = [];
+  lastCardPicked = -1;
+  clearInterval(timer);
+
+}
+
+function hideCard(b){
   document.getElementById(fliparray[2]).src = "images/big10.jpg";
   document.getElementById(fliparray[3]).src = "images/big10.jpg";
+  pickAgain();
 
 }
 //shuffle tiles on board
@@ -66,3 +82,18 @@ function shuffleArray(d) {
   }
   return d;
 }
+
+
+//fade in
+function inFade(){
+  var output = document.getElementById('cardz');
+  output.innerHTML = '';
+  $("#cardz").fadeIn(500);
+
+  output.innerHTML = c.src;
+}
+
+//fade out
+
+
+

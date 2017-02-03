@@ -2,15 +2,20 @@
 // See Readme for a list of supported ones
 
 body {
-  background: #e2ebf3;
+  background: #3B5998;
 }
-
+.outer{
+  background: #3B5998;
+  height: 500px;
+  width: 800px;
+  margin: auto;
+  // margin-top: 10%;
+}
 .card{
-  height: 200px;
-  // width:auto;
-  border: black 2px solid;
+  height: 80px;
+  background: white;
+  border: orange 1px solid;
   // margin: 3px 3px;
-  // padding: 10px;
 }
 .img{
   height: 100%;
