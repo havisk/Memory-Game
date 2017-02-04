@@ -1,6 +1,7 @@
 ## Welcome to My Project
 
-> I am your Readme.md file, you should probably update me.
+> Memory matching game using the Team logos of the Big 10 schools.
+Kute.js was used for the animation, and bootstrap was used for visual  structure.
 
 
 ## Usage
