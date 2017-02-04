@@ -1,11 +1,14 @@
 body {
   background: #3B5998; }
 
-.outer {
+.over {
   background: #3B5998;
   height: 500px;
   width: 800px;
   margin: auto; }
+
+.left {
+  margin-bottom: 5px; }
 
 .card {
   height: 80px;
@@ -16,5 +19,20 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden; }
+
+.jumbotron {
+  padding-bottom: 153px;
+  margin-bottom: 40px; }
+  .jumbotron .lsq {
+    margin-left: 20%; }
+  .jumbotron .square {
+    position: inline-block;
+    text-align: center;
+    margin-left: 8px;
+    height: 115px;
+    width: 140px;
+    border: black 1px solid;
+    border-radius: 35px;
+    padding-top: 1.5%; }
 
 /*# sourceMappingURL=main.css.map */

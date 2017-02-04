@@ -13,7 +13,7 @@ var timer = '';
 var score = 0;
 // console.log(solutionArray);
 shuffleArray(solutionArray);
-console.log(solutionArray);
+// console.log(solutionArray);
 
 // console.log(tileImage);
 start();
@@ -23,13 +23,13 @@ function start() {
   board.innerHTML = " ";
   //Create gameboard
   for (var i = 0; i <= solutionArray.length - 1; i++) {
-    board.innerHTML += '<div class="col-md-3 col-xs-3 card"><img id="cardz' + i + '" src="images/big10.jpg" onclick="pickCard(\'' + solutionArray[i] + '\', \'' + i + '\',this); return false;" class="img"></div>';
+    board.innerHTML += '<div class=" left col-md-3 col-xs-3 card"><img id="cardz' + i + '" src="images/big10.jpg" onclick="pickCard(\'' + solutionArray[i] + '\', \'' + i + '\',this); return false;" class="img"></div>';
     // console.log(i);
   }
 }
 
 window.pickCard = function (a, b, c) {
-  // console.log(c);
+  console.log(b);
   //setting to only be able to flip 2 cards
   if (cardsFlippedOver < 2 && lastCardPicked !== b) {
     fliparray[cardsFlippedOver] = solutionArray[b];
@@ -39,7 +39,7 @@ window.pickCard = function (a, b, c) {
     if (cardsFlippedOver === 2) {
       if (fliparray[0] === fliparray[1]) {
         console.log('same');
-        inFade(b);
+        animate();
         pickAgain();
         score++;
         //check if all game is won
@@ -79,16 +79,31 @@ function shuffleArray(d) {
   return d;
 }
 
-//fade in
-function inFade() {
-  var output = document.getElementById('cardz');
-  output.innerHTML = '';
-  $("#cardz").fadeIn(500);
+//Animation
+function animate() {
+  //identify the elements
+  var cor = document.querySelector('.pq');
+  var nor = document.querySelector('.bee');
+  var bop = document.querySelector('.gq');
+  var pop = document.querySelector('.see');
+  var gin = document.querySelector('.gee');
+  var sip = document.querySelector('.nip');
 
-  output.innerHTML = c.src;
+  var tween1 = KUTE.fromTo(cor, { translateX: 0, rotateX: 0, rotateY: 0 }, { translateX: 250, rotateX: 360, rotateY: 370 }, { parentPerspective: 800, parentPerspectiveOrigin: '100% top', duration: 2000, repeat: 1, yoyo: true,
+    easing: 'easingCubicOut' }).start();
+
+  var tween2 = KUTE.fromTo(nor, { translateX: 0, rotateX: 0, rotateY: 0 }, { translateX: -250, rotateX: 360, rotateY: 370 }, { perspective: 800, perspectiveOrigin: 'center top', duration: 2000, repeat: 1, yoyo: true,
+    easing: 'easingCubicOut' }).start();
+
+  var tween3 = KUTE.fromTo(bop, { translateX: 0, rotateX: 0, rotateY: 0 }, { translateX: 250, rotateX: 360, rotateY: 370 }, { parentPerspective: 800, parentPerspectiveOrigin: '100% top', duration: 2000, repeat: 1, yoyo: true,
+    easing: 'easingCubicOut' }).start();
+
+  var tween4 = KUTE.fromTo(pop, { translateX: 0, rotateX: 0, rotateY: 0 }, { translateX: -250, rotateX: 360, rotateY: 370 }, { perspective: 800, perspectiveOrigin: 'center top', duration: 2000, repeat: 1, yoyo: true,
+    easing: 'easingCubicOut' }).start();
+
+  var tween5 = KUTE.to(gin, { translate: -300 }, { repeat: 1, yoyo: true }).start();
+  var tween6 = KUTE.to(sip, { translate: -300 }, { repeat: 1, yoyo: true }).start();
 }
-
-//fade out
 
 },{}]},{},[1])
 
