@@ -12,12 +12,15 @@ var lastCardPicked = -1;
 var timer = '';
 var score = 0;
 // console.log(solutionArray);
-shuffleArray(solutionArray);
+
+document.getElementById("control").addEventListener("click", start);
 // console.log(solutionArray);
 
 // console.log(tileImage);
 start();
 function start() {
+  //shuffle tiles
+  shuffleArray(solutionArray);
   score = 0;
   //clear board
   board.innerHTML = " ";
