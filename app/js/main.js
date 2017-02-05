@@ -89,20 +89,20 @@ function animate() {
   var gin = document.querySelector('.gee');
   var sip = document.querySelector('.nip');
 
-  var tween1 = KUTE.fromTo(cor, { translateX: 0, rotateX: 0, rotateY: 0 }, { translateX: 250, rotateX: 360, rotateY: 370 }, { parentPerspective: 800, parentPerspectiveOrigin: '100% top', duration: 2000, repeat: 1, yoyo: true,
+  var tween1 = KUTE.fromTo(cor, { translateX: 0, rotateX: 0, rotateY: 0 }, { translateX: 250, rotateX: 360, rotateY: 370 }, { parentPerspective: 800, parentPerspectiveOrigin: '100% top', duration: 1000, repeat: 1, yoyo: true,
     easing: 'easingCubicOut' }).start();
 
-  var tween2 = KUTE.fromTo(nor, { translateX: 0, rotateX: 0, rotateY: 0 }, { translateX: -250, rotateX: 360, rotateY: 370 }, { perspective: 800, perspectiveOrigin: 'center top', duration: 2000, repeat: 1, yoyo: true,
+  var tween2 = KUTE.fromTo(nor, { translateX: 0, rotateX: 0, rotateY: 0 }, { translateX: -250, rotateX: 360, rotateY: 370 }, { perspective: 800, perspectiveOrigin: 'center top', duration: 1000, repeat: 1, yoyo: true,
     easing: 'easingCubicOut' }).start();
 
-  var tween3 = KUTE.fromTo(bop, { translateX: 0, rotateX: 0, rotateY: 0 }, { translateX: 250, rotateX: 360, rotateY: 370 }, { parentPerspective: 800, parentPerspectiveOrigin: '100% top', duration: 2000, repeat: 1, yoyo: true,
+  var tween3 = KUTE.fromTo(bop, { translateX: 0, rotateX: 0, rotateY: 0 }, { translateX: 250, rotateX: 360, rotateY: 370 }, { parentPerspective: 800, parentPerspectiveOrigin: '100% top', duration: 1000, repeat: 1, yoyo: true,
     easing: 'easingCubicOut' }).start();
 
-  var tween4 = KUTE.fromTo(pop, { translateX: 0, rotateX: 0, rotateY: 0 }, { translateX: -250, rotateX: 360, rotateY: 370 }, { perspective: 800, perspectiveOrigin: 'center top', duration: 2000, repeat: 1, yoyo: true,
+  var tween4 = KUTE.fromTo(pop, { translateX: 0, rotateX: 0, rotateY: 0 }, { translateX: -250, rotateX: 360, rotateY: 370 }, { perspective: 800, perspectiveOrigin: 'center top', duration: 1000, repeat: 1, yoyo: true,
     easing: 'easingCubicOut' }).start();
 
-  var tween5 = KUTE.to(gin, { translate: -300 }, { repeat: 1, yoyo: true }).start();
-  var tween6 = KUTE.to(sip, { translate: -300 }, { repeat: 1, yoyo: true }).start();
+  var tween5 = KUTE.to(gin, { translate: -300 }, { duration: 1000, repeat: 1, yoyo: true }).start();
+  var tween6 = KUTE.to(sip, { translate: -300 }, { duration: 1000, repeat: 1, yoyo: true }).start();
 }
 
 },{}]},{},[1])

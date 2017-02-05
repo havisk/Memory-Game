@@ -1,6 +1,9 @@
 body {
   background: #3B5998; }
 
+#control {
+  display: none; }
+
 .over {
   background: #3B5998;
   height: 500px;
@@ -24,7 +27,7 @@ body {
   padding-bottom: 153px;
   margin-bottom: 40px; }
   .jumbotron .lsq {
-    margin-left: 20%; }
+    margin-left: 19%; }
   .jumbotron .square {
     position: inline-block;
     text-align: center;
