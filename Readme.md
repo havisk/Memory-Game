@@ -1,7 +1,7 @@
 ## Welcome to My Project
 
 > Memory matching game using the Team logos of the Big 10 schools.
-Kute.js was used for the animation, and bootstrap was used for visual  structure.
+Kute.js was used for the animation, and bootstrap framework was used.
 
 
 ## Usage
