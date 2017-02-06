@@ -1,7 +1,7 @@
 // import $ from 'jquery';
 
-let tileImage = ['illini.jpeg', 'indiana.jpg', 'Iowa.png', 'min.jpg', 'michstate.jpg', 'neb.jpg',
- 'northwestern.png', 'ohiostate.png', 'penn.gif', 'purdue.gif', 'Rutgers.jpg', 'terps.png', 'wis.png', 'Mich.jpg'];
+let tileImage = ['illini.jpg', 'indiana.jpg', 'Iowa.jpg', 'min.jpg', 'michstate.jpg', 'neb.jpg',
+ 'northwestern.jpg', 'ohiostate.jpg', 'penn.jpg', 'purdue.jpg', 'Rutgers.jpg', 'terps.jpg', 'wis.jpg', 'Mich.jpg'];
 let board = document.getElementById("gameboard");
 let cardsFlippedOver = 0;
 let solutionArray = tileImage.concat(tileImage);
