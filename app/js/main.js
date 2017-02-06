@@ -11,19 +11,22 @@ var fliparray = [];
 var lastCardPicked = -1;
 var timer = '';
 var score = 0;
+var messageText = document.getElementById("message");
+var mess = '';
+var newMessage = document.getElementById("control");
 // console.log(solutionArray);
 
-document.getElementById("control").addEventListener("click", start);
+document.getElementById("control").addEventListener("click", start); //gives function to button
 // console.log(solutionArray);
-
 // console.log(tileImage);
+
 start();
 function start() {
-  //shuffle tiles
-  shuffleArray(solutionArray);
+  clearInterval(timer);
+  shuffleArray(solutionArray); //shuffle tiles
   score = 0;
-  //clear board
-  board.innerHTML = " ";
+  board.innerHTML = ""; //clear board
+  text("Click a Tile to start");
   //Create gameboard
   for (var i = 0; i <= solutionArray.length - 1; i++) {
     board.innerHTML += '<div class=" left col-md-3 col-xs-3 card"><img id="cardz' + i + '" src="images/big10.jpg" onclick="pickCard(\'' + solutionArray[i] + '\', \'' + i + '\',this); return false;" class="img"></div>';
@@ -41,23 +44,39 @@ window.pickCard = function (a, b, c) {
     c.src = 'images/' + solutionArray[b];
     if (cardsFlippedOver === 2) {
       if (fliparray[0] === fliparray[1]) {
-        console.log('same');
+        // console.log('same');
+        text("MATCH FOUND");
         animate();
         pickAgain();
         score++;
-        //check if all game is won
+        //check if game is won
         if (tileImage.length === score) {
-          console.log('end game');
+          gameOver();
+          // console.log('end game');
         }
       } else {
-        timer = setInterval(hideCard, 500);
-        console.log("different");
-      }
+          timer = setInterval(hideCard, 500);
+          // console.log("different");
+          text("NOT A MATCH");
+        }
     }
     lastCardPicked = b;
   }
   // console.log(fliparray);
 };
+
+function text(message) {
+  clearInterval(mess);
+  messageText.innerHTML = message;
+  if (message !== 'Find a Match') {
+    mess = setInterval(text, 2000, 'Find a Match');
+  }
+}
+
+function gameOver() {
+  text("YOU DID IT <br> BIG 10 RULES!!");
+  newMessage.innerHTML = "Click to Play Again";
+}
 
 function pickAgain() {
   cardsFlippedOver = 0;

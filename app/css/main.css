@@ -22,7 +22,7 @@ body {
 
 .jumbotron {
   padding-bottom: 153px;
-  margin-bottom: 40px; }
+  margin-bottom: 5px; }
   .jumbotron .lsq {
     margin-left: 19%; }
   .jumbotron .square {
@@ -34,5 +34,10 @@ body {
     border: black 1px solid;
     border-radius: 35px;
     padding-top: 1.5%; }
+
+#message {
+  font-size: 1.5em;
+  color: red;
+  background: #353841; }
 
 /*# sourceMappingURL=main.css.map */
