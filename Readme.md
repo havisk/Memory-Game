@@ -3,6 +3,10 @@
 > Memory matching game using the Team logos of the Big 10 schools.
 Kute.js was used for the animation, and bootstrap framework was used.
 
+> http://big10_memory_game.surge.sh/
+
+> There appears to be a major lag playing from the link above.
+
 
 ## Usage
 

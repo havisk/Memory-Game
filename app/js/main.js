@@ -3,7 +3,7 @@
 
 'use strict';
 
-var tileImage = ['illini.jpeg', 'indiana.jpg', 'Iowa.png', 'min.jpg', 'michstate.jpg', 'neb.jpg', 'northwestern.png', 'ohiostate.png', 'penn.gif', 'purdue.gif', 'Rutgers.jpg', 'terps.png', 'wis.png', 'Mich.jpg'];
+var tileImage = ['illini.jpg', 'indiana.jpg', 'Iowa.jpg', 'min.jpg', 'michstate.jpg', 'neb.jpg', 'northwestern.jpg', 'ohiostate.jpg', 'penn.jpg', 'purdue.jpg', 'Rutgers.jpg', 'terps.jpg', 'wis.jpg', 'Mich.jpg'];
 var board = document.getElementById("gameboard");
 var cardsFlippedOver = 0;
 var solutionArray = tileImage.concat(tileImage);
@@ -55,7 +55,7 @@ window.pickCard = function (a, b, c) {
           // console.log('end game');
         }
       } else {
-          timer = setInterval(hideCard, 500);
+          timer = setInterval(hideCard, 2000);
           // console.log("different");
           text("NOT A MATCH");
         }

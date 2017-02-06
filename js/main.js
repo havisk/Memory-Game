@@ -57,7 +57,7 @@ window.pickCard = function(a,b,c){
 
         }
       }else{
-        timer = setInterval(hideCard, 500);
+        timer = setInterval(hideCard, 2000);
         // console.log("different");
         text("NOT A MATCH");
 
