@@ -55,7 +55,7 @@ window.pickCard = function (a, b, c) {
           // console.log('end game');
         }
       } else {
-          timer = setInterval(hideCard, 2000);
+          timer = setInterval(hideCard, 1000);
           // console.log("different");
           text("NOT A MATCH");
         }
