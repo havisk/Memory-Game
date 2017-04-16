@@ -21,9 +21,11 @@ body {
   overflow: hidden; }
 
 .jumbotron {
-  height: 17em; }
+  height: 12em;
+  margin-bottom: 4px; }
   .jumbotron .lsq {
-    margin-left: 6%; }
+    margin-left: 6%;
+    margin-top: -4%; }
   .jumbotron .square {
     position: inline-block;
     text-align: center;
