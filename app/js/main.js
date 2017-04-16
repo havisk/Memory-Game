@@ -29,7 +29,7 @@ function start() {
   text("Click a Tile to start");
   //Create gameboard
   for (var i = 0; i <= solutionArray.length - 1; i++) {
-    board.innerHTML += '<div class=" left col-md-3 col-xs-3 card"><img id="cardz' + i + '" src="images/big10.jpg" onclick="pickCard(\'' + solutionArray[i] + '\', \'' + i + '\',this); return false;" class="img"></div>';
+    board.innerHTML += '<div class=" left col-md-3 col-xs-6 col-sm-6 card"><img id="cardz' + i + '" src="images/big10.jpg" onclick="pickCard(\'' + solutionArray[i] + '\', \'' + i + '\',this); return false;" class="img"></div>';
     // console.log(i);
   }
 }

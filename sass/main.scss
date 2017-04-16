@@ -4,9 +4,6 @@
 body {
   background: #3B5998;
 }
-#control{
-  // display: none;
-}
 .over{
   background: #3B5998;
   height: 500px;
@@ -29,21 +26,21 @@ body {
   overflow: hidden;
 }
 .jumbotron{
-  padding-bottom: 153px;
-  margin-bottom: 5px;
+  // padding-bottom: 14%;
+  // margin-bottom: 2%;
+  height: 17em;
   .lsq{
-    margin-left: 19%;
-
+    margin-left: 6%;
     }
     .square{
       position: inline-block;
       text-align: center;
-      margin-left: 8px;
+      margin-left: 1%;
       height: 115px;
       width: 140px;
       border: black 1px solid;
-      border-radius: 35px;
-      padding-top: 1.5%;
+      border-radius: 35em;
+      padding-top: 2.5%;
   }
 }
 
