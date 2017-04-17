@@ -5,8 +5,6 @@ Kute.js was used for the animation, and bootstrap framework was used.
 
 - [BIG10 Memory Game](http://big10_memory_game.surge.sh/)
 
-> There appears to be a major lag playing from the link above.
-
 
 ## Usage
 
@@ -26,20 +24,12 @@ Kute.js was used for the animation, and bootstrap framework was used.
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
 - [Foundation 5](http://foundation.zurb.com/)
 
-#### How to use them?
+#### Tech USed
 
-At the top of your `main.scss` file, just import any of the following:
+- JavaScript
+- KuteJS
+- BootStrap
 
-```scss
-@import "bourbon";
-@import "neat";
-
-@import "foundation";
-
-@import "font-awesome";
-```
-
-> Note: You probably don't want to use BOTH Bourbon/Neat & Foundation. Just pick one.
 
 ## NPM Tools Used
 
