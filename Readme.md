@@ -24,7 +24,7 @@ Kute.js was used for the animation, and bootstrap framework was used.
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
 - [Foundation 5](http://foundation.zurb.com/)
 
-#### Tech USed
+#### Tech Used
 
 - JavaScript
 - KuteJS
