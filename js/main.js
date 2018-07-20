@@ -12,11 +12,10 @@ let score = 0;
 let messageText = document.getElementById("message");
 let mess = '';
 let newMessage = document.getElementById("control");
-// console.log(solutionArray);
+
 
 document.getElementById("control").addEventListener("click", start);//gives function to button
-// console.log(solutionArray);
-// console.log(tileImage);
+
 
 
 start();
@@ -26,10 +25,10 @@ function start(){
   score = 0;
   board.innerHTML = "";//clear board
   text("Click a Tile to start");
+
   //Create gameboard
   for(let i = 0; i <= (solutionArray.length)-1; i++){
     board.innerHTML += '<div class=" left col-md-3 col-xs-6 col-sm-6 card"><img id="cardz'+i+'" src="images/big10.jpg" onclick="pickCard(\''+solutionArray[i]+'\', \''+i+'\',this); return false;" class="img"></div>';
-    // console.log(i);
   }
 
 }
@@ -45,7 +44,6 @@ window.pickCard = function(a,b,c){
     c.src = 'images/'+solutionArray[b];
     if(cardsFlippedOver===2){
       if(fliparray[0]===fliparray[1]){
-        // console.log('same');
         text("MATCH FOUND");
         animate();
         pickAgain();
@@ -53,12 +51,10 @@ window.pickCard = function(a,b,c){
         //check if game is won
         if(tileImage.length === score){
           gameOver();
-          // console.log('end game');
 
         }
       }else{
         timer = setInterval(hideCard, 1000);
-        // console.log("different");
         text("NOT A MATCH");
 
         
@@ -66,7 +62,6 @@ window.pickCard = function(a,b,c){
     }
     lastCardPicked = b;
   }
-  // console.log(fliparray);
 };
 
 function text(message){
@@ -109,6 +104,7 @@ function shuffleArray(d) {
 
 //Animation
 function animate(){
+
   //identify the elements
   let cor = document.querySelector('.pq');
   let nor = document.querySelector('.bee');

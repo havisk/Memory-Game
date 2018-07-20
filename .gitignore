@@ -1,3 +1,9 @@
 node_modules
 .DS_Store
 .divshot-cache
+
+.idea/Memory_Game.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+
